@@ -30,7 +30,7 @@ namespace DRBackEnd.Controllers
                 return NotFound();
             }
 
-            return Ok();
+            return Ok(DRPlades);
         }
 
         // GET api/<DRPladesamlings>/5

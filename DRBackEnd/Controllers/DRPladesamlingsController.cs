@@ -1,17 +1,34 @@
+using DRBackEnd.Models;
+using DRBackEnd.Repository;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DRBackEnd.Controllers
 {
+    
     [Route("api/[controller]")]
     [ApiController]
     public class DRPladesamlingsController : ControllerBase
     {
+        private readonly DRPladeRepository _repo;
+        public DRPladesamlingsController(DRPladeRepository dRPladeRepository)
+        {
+            _repo = dRPladeRepository;
+        }
         // GET: api/<DRPladesamlings>
         [HttpGet]
-        public IEnumerable<string> Get()
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public ActionResult <IEnumerable<string>> Get()
         {
-            return new string[] { "value1", "value2" };
+            IEnumerable<DRPladeModel> DRPlades = _repo.Get();
+
+            if (DRPlades == null)
+            {
+                return NotFound();
+            }
+
+            return Ok();
         }
 
         // GET api/<DRPladesamlings>/5

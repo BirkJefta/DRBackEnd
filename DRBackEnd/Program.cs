@@ -1,3 +1,5 @@
+using DRBackEnd.DRPladeRepository;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -9,6 +11,7 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
+builder.Services.AddSingleton<DRPladeRepository>(new DRPladeRepository());
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

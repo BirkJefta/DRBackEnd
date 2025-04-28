@@ -14,6 +14,7 @@ namespace DRBackEnd.Controllers
         public DRPladesamlingsController(DRPladeRepository dRPladeRepository)
         {
             _repo = dRPladeRepository;
+            _repo.Initiation();
         }
         // GET: api/<DRPladesamlings>
         [HttpGet]
@@ -21,6 +22,7 @@ namespace DRBackEnd.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public ActionResult <IEnumerable<string>> Get()
         {
+            
             IEnumerable<DRPladeModel> DRPlades = _repo.Get();
 
             if (DRPlades == null)

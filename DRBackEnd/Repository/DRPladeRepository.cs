@@ -15,7 +15,10 @@ public class DRPladeRepository
     public IEnumerable<DRPladeModel> Get()
     {
         IEnumerable<DRPladeModel> DRPlades = new List<DRPladeModel>(DRPlader);
-        
+        if (DRPlades == null)
+        {
+            throw new ArgumentNullException("No DRPlader found");
+        }
         return DRPlades;
     }
 }

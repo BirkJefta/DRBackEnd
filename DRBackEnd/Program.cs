@@ -1,4 +1,4 @@
-using DRBackEnd.DRPladeRepository;
+using DRBackEnd.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 

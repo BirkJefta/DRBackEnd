@@ -9,9 +9,10 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddSingleton<DRPladeRepository>(new DRPladeRepository());
 var app = builder.Build();
 
-builder.Services.AddSingleton<DRPladeRepository>(new DRPladeRepository());
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

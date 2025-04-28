@@ -10,7 +10,7 @@ namespace DRBackEnd.Controllers
     [ApiController]
     public class DRPladesamlingsController : ControllerBase
     {
-        private readonly DRPladeRepository _repo;
+        private DRPladeRepository _repo;
         public DRPladesamlingsController(DRPladeRepository dRPladeRepository)
         {
             _repo = dRPladeRepository;
@@ -20,9 +20,9 @@ namespace DRBackEnd.Controllers
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public ActionResult <IEnumerable<string>> Get()
+        public ActionResult<IEnumerable<string>> Get()
         {
-            
+
             IEnumerable<DRPladeModel> DRPlades = _repo.Get();
 
             if (DRPlades == null)

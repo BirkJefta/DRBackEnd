@@ -5,6 +5,8 @@ VisualStudioVersion = 17.13.35825.156 d17.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DRBackEnd", "DRBackEnd\DRBackEnd.csproj", "{28229DC6-A666-4159-932E-981F51A3498C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepoTest", "RepoTest\RepoTest.csproj", "{390AD961-38D4-4757-870B-5C3A85423DEC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{28229DC6-A666-4159-932E-981F51A3498C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{28229DC6-A666-4159-932E-981F51A3498C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{28229DC6-A666-4159-932E-981F51A3498C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{390AD961-38D4-4757-870B-5C3A85423DEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{390AD961-38D4-4757-870B-5C3A85423DEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{390AD961-38D4-4757-870B-5C3A85423DEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{390AD961-38D4-4757-870B-5C3A85423DEC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -6,6 +6,11 @@ public class DRPladeRepository
 {
     private readonly List<DRPladeModel> DRPlader = new();
 
+    public void Initiation()
+    {
+        DRPlader.Add(new DRPladeModel("Happy", "Pharrell", 180, 2016));
+    }
+
     public DRPladeRepository() { }
     public IEnumerable<DRPladeModel> Get()
     {

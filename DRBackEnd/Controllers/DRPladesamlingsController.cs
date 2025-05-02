@@ -34,7 +34,7 @@ namespace DRBackEnd.Controllers
         }
 
         // GET api/<DRPladesamlings>/5
-        [HttpGet("{id}")]
+        [HttpGet("{id}")] 
         public string Get(int id)
         {
             return "value";

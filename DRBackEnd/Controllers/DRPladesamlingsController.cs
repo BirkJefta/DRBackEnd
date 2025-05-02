@@ -24,7 +24,7 @@ namespace DRBackEnd.Controllers
         {
 
             IEnumerable<DRPladeModel> DRPlades = _repo.Get();
-
+             
             if (DRPlades == null)
             {
                 return NotFound();

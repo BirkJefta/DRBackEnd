@@ -22,7 +22,7 @@ namespace DRBackEnd.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public ActionResult<IEnumerable<string>> Get()
         {
-
+             
             IEnumerable<DRPladeModel> DRPlades = _repo.Get();
              
             if (DRPlades == null)
